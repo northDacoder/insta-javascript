@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to near.me!</title>
+    <meta charset="utf-8">
+    
+    <!-- Meta Tags optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="images/ios7_app_icon_iphone@2x.png">
+    <!-- CSS Styles -->
+
+    <!-- Custom Font Icons -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Caesar+Dressing|Cherry+Cream+Soda|Josefin+Sans:100,400|Rokkitt|Graduate|Pacifico|Special+Elite|Playball|Sancreek' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/instabam.css">
+    <link rel="stylesheet" type="text/css" href="css/feed.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/instabam.js"></script>
+
+</head>
+<body>
+   <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color: white;">WhosNear.me</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top</a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul> -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- START OF PHOTO FEED -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+        
+                   
+                    <div class="col-sm-3"><a href="https://instagram.com/oauth/authorize/?client_id=6b92c7f8541b49f6a27b7d8034bfe1e3&amp;redirect_uri=https://whosnear.firebaseapp.com&amp;response_type=token" class="btn btn-info btn-block btn-lg" id="instagramlogin"><i class="fa fa-instagram"></i> Login</a>
+                    </div>
+                
+                </div>
+
+                <!--   <div class="row" id="firstRow">
+                   
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-1"></div>
+                    
+                    <input class="col-xs-6" type="text" id="searchinput" placeholder="Enter city..." />
+                    
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-2"></div>
+                </div> -->
+            
+            </div>   
+        </div>
+        <div class="row" id="feedrow">
+            <span class="first">
+                <h3 id="username"></h3> <i class="fa fa-edit"></i>
+            </span>
+            <ul class="timeline">
+                <li>
+                    <div class="avatar">
+                        <img src="" class="img-circle" id="userimage">
+                        <div class="hover" id="userlikes">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="bubble-container">
+                        <div class="bubble">
+                        <div class="retweet">
+                            <i class="fa fa-retweet"></i>
+                        </div>
+                            <h3 id="userlocation"></h3> 
+                            <h3 id="timetag"></h3>
+                            <h3 id="locationtag"></h3>
+                            <div class="over-bubble">
+                                <i class="fa fa-mail-reply"></i>
+                                <i class="fa fa-retweet"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="arrow"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="avatar">
+                        <img src="http://www.croop.cl/UI/twitter/images/carl.jpg">
+                        <div class="hover">
+                            <div class="icon-twitter"></div>
+                        </div>
+                    </div>
+                    <div class="bubble-container">
+                        <div class="bubble">
+                            <h3>@carlf</h3><br/>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, iusto, maxime, ullam autem a voluptate rem quos repudiandae.
+                            <div class="over-bubble">
+                                <div class="icon-mail-reply action"></div>
+                                <div class="icon-retweet action"></div>
+                                <div class="icon-star"></div>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="avatar">
+                        <img src="http://www.croop.cl/UI/twitter/images/russel.jpg">
+                        <div class="hover">
+                            <div class="icon-twitter"></div>
+                        </div>
+                    </div>
+                    <div class="bubble-container">
+                        <div class="bubble">
+                        <h3>@russel</h3><br/>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, iusto, maxime, ullam autem a voluptate rem quos repudiandae.
+                            <div class="over-bubble">
+                                <div class="icon-mail-reply action"></div>
+                                <div class="icon-retweet action"></div>
+                                <div class="icon-star"></div>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="avatar">
+                        <img src="http://www.croop.cl/UI/twitter/images/carl.jpg">
+                        <div class="hover">
+                            <div class="icon-twitter"></div>
+                        </div>
+                    </div>
+                    <div class="bubble-container">
+                        <div class="bubble">
+                            <h3>@carlf</h3><br/>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, iusto, maxime, ullam autem a voluptate rem quos repudiandae.
+                            <div class="over-bubble">
+                                <div class="icon-mail-reply action"></div>
+                                <div class="icon-retweet action"></div>
+                                <div class="icon-star"></div>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+            </div>
+            <!-- Instagram API Data -->
+            <div id="instafeed" class="row"></div>
+        </div>
+  
+</body>
+</html>

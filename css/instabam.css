@@ -1,0 +1,162 @@
+body { 
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	text-decoration: none;
+	background: white;
+}
+a {
+	text-decoration: none;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0 2px;
+	width: 1200px;
+	height: 100%;
+}
+
+h1.page-header {
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	font-size: 50px;
+	border-bottom: none;
+	box-shadow: inset 0px 5px 10px #111;
+	padding-top: 10px;
+	margin-bottom: 60px;
+	background: rgba(0,0,0,.8);
+}
+
+img.pinBackground {
+	width: 245px;
+	height: 410px;
+	padding: 0;
+	margin: 0 auto;
+	margin-top: -229px;
+	z-index: -10;
+	border: none;
+	box-shadow: none;
+}
+
+div.imageoverlay {
+	background-size: 250px 403px;
+	margin: 0 auto; 
+	width: 264px; 
+	height: 150px;
+	color: white;
+	font-size: 18px;
+	opacity: 0;
+	margin-top: -229px;
+	padding: 20px 15px;
+	position: relative;
+	left: 30px;
+	bottom: 60px;
+}
+
+div#firstRow {margin-bottom: 40px;}
+#firstRow {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: -40px;
+}
+
+div.imageoverlay:hover {opacity: 1;}
+div.imageoverlay:hover {opacity: 1;text-decoration: none;}
+span.distancetag {background-color: rgba(0,0,0,.6);text-decoration: none;}
+span.locationtag {background-color: rgba(0,0,0,.6);text-decoration: none;}
+span.timetag {background-color: rgba(0,0,0,.6);text-decoration: none;}
+.row span {padding: 5px;text-decoration: none;}
+h1.usernametag {font-size: 40px;text-align: center;margin-bottom: 120px;position: relative;top: 70px;}
+img {
+	padding: 0;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	position: relative;
+	top: 15px;
+	box-shadow: 0 0 3px rgba(0,0,0,.5);
+	border: 2px dashed rgba(255,255,255,.8);
+	width: 210px;
+	height: 210px;
+}
+
+
+
+#instafeed {
+	width: 105%;
+	margin: 0 auto; 
+	padding: 0;
+}
+
+#instafeed {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+
+#mailme {
+	width: 50px;
+	height: 50px;
+	border: none;
+	position: relative;
+	box-shadow: none;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 768px) {
+	body{
+		margin: 0;
+		padding: 0; 
+		padding-top: 90px;
+		width: 100%; 
+		height: 100%;
+	}
+
+	#feedHeader {
+		padding-top: 24px;
+		font-size: 22px;
+		position: fixed;
+		width: 100%;
+		height: 60px;
+		top: -45px;
+		box-shadow: none;
+		background-color: rgba(0,0,0,.7);
+		box-shadow: 0px 0px 5px black;
+		color: white;
+		z-index: 10;
+	}
+
+	div.imageoverlay {
+		width: 240px;
+		height: 100px;
+		position: relative;
+		top: 100px;
+		left: 0px;
+		font-size: 14px;
+	}
+	div.imageoverlay {opacity: 1;text-decoration: none;}
+	ul.imageCard {margin-bottom: 80px;}
+	ul.imageCard span {
+		position: relative;
+		bottom: 12px;
+		left: 0px;
+	}
+
+	h1.usernametag {position: relative; top: 120px;}
+	#mailme {position: relative; top: -86px; left: 20px; z-index: 10; width: 80px height: 80px;
+	}
+
+
+
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
