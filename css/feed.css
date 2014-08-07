@@ -7,8 +7,7 @@
 #feedrow {
   font-family: 'Quicksand';
   color: #7f8c8d;
-  font-size: 14px;
-  background-color: #ededed; }
+  font-size: 14px;}
 
 .bubble {
   width: 100%;
@@ -143,7 +142,7 @@
   border-top-right-radius: 8px;
   position: relative; }
 
-.icon-twitter {
+.fa-twitter {
   font-size: 1.5em; }
 
 .new {
@@ -199,7 +198,7 @@
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in; }
 
-.icon-star {
+.fa-star {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -216,7 +215,7 @@
     cursor: pointer;
     color: #f39c12; }
 
-.icon-retweet {
+.fa-retweet {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -233,7 +232,7 @@
     cursor: pointer;
     color: #16a085; }
 
-.icon-mail-reply {
+.fa-mail-reply {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
