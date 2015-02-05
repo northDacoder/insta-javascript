@@ -28,24 +28,6 @@ $(document).ready(function(){
             $("#instafeed").append(imagesHTML);
 
 
-            var imagesHTML =    '<a href="' + cleanData[i].link + '" class="col-xs-12 col-sm-8 col-sm-offset-2" id="profile-card">' +
-                                          '<div class="row"' +
-                                              '<center><img src="' + cleanData[i].user_profile_pic + '" class="img-circle img-responsive pull-left" /></center>' +
-                                              '<h1 class="text-center">@' + cleanData[i].user_name + '</h1>' +
-                                              '<p class="lead"><i class="fa fa-map-marker"></i>' + cleanData[i].distance + '  Miles</p>' +
-                              		        '<center><img src="' + cleanData[i].image_url + '" class="img-rounded img-responsive" ></center>' +
-                              		        '<span class="text-center"><i class="fa fa-map-marker" id="largepin"></i></span>' +
-
-                                      		'<h3 class="text-center">' + cleanData[i].location_name + '</h3>' +
-                                      		'<h3 class="text-center">' + cleanData[i].created_time + '</h3>' +
-                                      		// '<h3 class="text-center">' + cleanData[i].comments + ' likes</h3>' +
-                                              // '<h3 class="text-center">' + cleanData[i].tags + ' likes</h3>' +
-                                              '<h3 class="text-center">' + cleanData[i].user_full_name + ' likes</h3>' +
-                                          '</div>' +
-                 		                '</a>';
-
-
-
             // var username = cleanData[i].userName;
             // $("#username").html(username);
 
