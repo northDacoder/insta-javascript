@@ -122,9 +122,9 @@ $(document).ready(function(){
 
         loadHtml();
     }
-
-    var clientid = '9c82f2d7034d4e23900255786d736f44';
-    var redirect = 'http://localhost';
+    // 
+    // var clientid = '9c82f2d7034d4e23900255786d736f44';
+    // var redirect = 'http://localhost';
 
     function getData() {
         $.ajax({
