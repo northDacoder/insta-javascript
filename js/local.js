@@ -99,6 +99,8 @@ $(document).ready(function(){
     }
 
 
+    // Function to retrieve the user data from the Instagram API 
+    getData();
 
 
 
