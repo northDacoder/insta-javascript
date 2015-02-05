@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    /* Define 2 variables that will start with no values, once the users geolocation is available
+    these values will be reassigned to the actual latitude & longitude values */
     var latitude;
     var longitude;
 
@@ -26,21 +28,21 @@ $(document).ready(function(){
             $("#instafeed").append(imagesHTML);
 
 
-            // var imagesHTML =    '<a href="' + cleanData[i].link + '" class="col-xs-12 col-sm-8 col-sm-offset-2" id="profile-card">' +
-            //                               '<div class="row"' +
-            //                                   '<center><img src="' + cleanData[i].user_profile_pic + '" class="img-circle img-responsive pull-left" /></center>' +
-            //                                   '<h1 class="text-center">@' + cleanData[i].user_name + '</h1>' +
-            //                                   '<p class="lead"><i class="fa fa-map-marker"></i>' + cleanData[i].distance + '  Miles</p>' +
-            //                   		        '<center><img src="' + cleanData[i].image_url + '" class="img-rounded img-responsive" ></center>' +
-            //                   		        '<span class="text-center"><i class="fa fa-map-marker" id="largepin"></i></span>' +
+            var imagesHTML =    '<a href="' + cleanData[i].link + '" class="col-xs-12 col-sm-8 col-sm-offset-2" id="profile-card">' +
+                                          '<div class="row"' +
+                                              '<center><img src="' + cleanData[i].user_profile_pic + '" class="img-circle img-responsive pull-left" /></center>' +
+                                              '<h1 class="text-center">@' + cleanData[i].user_name + '</h1>' +
+                                              '<p class="lead"><i class="fa fa-map-marker"></i>' + cleanData[i].distance + '  Miles</p>' +
+                              		        '<center><img src="' + cleanData[i].image_url + '" class="img-rounded img-responsive" ></center>' +
+                              		        '<span class="text-center"><i class="fa fa-map-marker" id="largepin"></i></span>' +
 
-            //                           		'<h3 class="text-center">' + cleanData[i].location_name + '</h3>' +
-            //                           		'<h3 class="text-center">' + cleanData[i].created_time + '</h3>' +
-            //                           		// '<h3 class="text-center">' + cleanData[i].comments + ' likes</h3>' +
-            //                                   // '<h3 class="text-center">' + cleanData[i].tags + ' likes</h3>' +
-            //                                   '<h3 class="text-center">' + cleanData[i].user_full_name + ' likes</h3>' +
-            //                               '</div>' +
-            //      		                '</a>';
+                                      		'<h3 class="text-center">' + cleanData[i].location_name + '</h3>' +
+                                      		'<h3 class="text-center">' + cleanData[i].created_time + '</h3>' +
+                                      		// '<h3 class="text-center">' + cleanData[i].comments + ' likes</h3>' +
+                                              // '<h3 class="text-center">' + cleanData[i].tags + ' likes</h3>' +
+                                              '<h3 class="text-center">' + cleanData[i].user_full_name + ' likes</h3>' +
+                                          '</div>' +
+                 		                '</a>';
 
 
 
@@ -65,12 +67,6 @@ $(document).ready(function(){
     }
 
 
-    function success(position) {
-        latitude = Number(position.coords.latitude);
-        longitude = Number(position.coords.longitude);
-
-        getData();
-    }
 
 
     function sliceData(arr) {
@@ -80,6 +76,8 @@ $(document).ready(function(){
         for (var i = 0; i < sliceArr.length; i++) {
             var imageObj = {};
             imageObj["comments"] = sliceArr[i].caption;
+
+            // User Comments
             // imageObj["comments_user"] = sliceArr[i].caption.from.username;
             // imageObj["comments_name"] = sliceArr[i].caption.from.full_name;
             // imageObj["comments_user_pic"] = sliceArr[i].caption.from.profile_picture;
@@ -120,12 +118,13 @@ $(document).ready(function(){
 
         }
 
+
+        // Call the loadHtml() function to take the data from Instagram & render it in the Html for the user to see
         loadHtml();
     }
-    // 
-    // var clientid = '9c82f2d7034d4e23900255786d736f44';
-    // var redirect = 'http://localhost';
 
+
+    // Ajax function to pull data from the logged in user's Instagram Account
     function getData() {
         $.ajax({
             type: 'GET',
@@ -140,11 +139,27 @@ $(document).ready(function(){
     }
 
 
+    // Success function that will be called if the broswer is able to access the native geolocation functionality
+    // navigator.geolocation.getCurrentPosition(success, error);
+    function success(position) {
+        latitude = Number(position.coords.latitude);
+        longitude = Number(position.coords.longitude);
+
+        /* After successfully loading the latitude & longitude from
+        the users location, we execute the getData() function that will
+        make an Ajax call to Instagram & retrieve the current users data */
+        getData();
+    }
+
+
+    // Error function that will be called if the browser does not have geolocation capabilities & is not supported
     function error(msg) {
         console.log(msg);
     }
 
 
+
+    // If-else statement to ask permission to the user if the app can access their current geolocation coordinates & also see if the functionality exists in the current browser
     if (navigator.geolocation) {
         console.log("Geolocation found, getting coordinates now...");
         navigator.geolocation.getCurrentPosition(success, error);
@@ -154,6 +169,9 @@ $(document).ready(function(){
         console.log("Geolocation not found, please try again!");
         error("not supported");
     }
+
+
+
 
     $("span.span-realname").on('click', function(){
         $(".span-realname").css("display", "none");

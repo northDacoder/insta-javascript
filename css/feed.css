@@ -51,7 +51,7 @@
   width: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 20px solid #ecf0f1; 
+  border-right: 20px solid #ecf0f1;
   border-right: 20px solid rgba(0,0,0,.5);
 }
 
@@ -240,6 +240,5 @@ h3 {
     font-family: 'Lato';
     display: inline-block;
     margin-bottom: .2em;
-    color: #95a5a6; 
+    color: #95a5a6;
 }
-
