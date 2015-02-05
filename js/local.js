@@ -75,6 +75,7 @@ $(document).ready(function(){
             imageObj["likes"] = sliceArr[i].likes.count;
             imageObj["link"] = sliceArr[i].link;
 
+
             if (sliceArr[i].location != null) {
                 var imgLat = sliceArr[i].location.latitude;
                 var imgLon = sliceArr[i].location.longitude;
@@ -94,6 +95,7 @@ $(document).ready(function(){
                 cleanData.sort(function(a, b){
                     return a.distance - b.distance;
                 });
+
             }
 
             cleanData.push(imageObj);
@@ -106,7 +108,7 @@ $(document).ready(function(){
     }
 
 
-    // Ajax function to pull data from the logged in user's Instagram Account
+    // Ajax function to retrieve the current Users data from the Instagram API
     function getData() {
         $.ajax({
             type: 'GET',
