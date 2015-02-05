@@ -1,0 +1,129 @@
+
+.activity {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: rgba(0,0,0,0);
+	position: relative;
+	margin-bottom: 10px;
+}
+
+
+
+.activity ul li .author img {
+	height: 120px;
+	width: 120px;
+	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+	border: 5px solid white;
+	box-shadow: 1px 1px 3px #333;
+}
+
+.profile-username {
+	position: absolute; 
+	top: 50px; 
+	width: 115px;
+	background: rgba(255,255,255,1);
+	padding: 5px 0;
+	border-radius: 0;
+	color: #333;
+}
+
+.span-realname {display: none;}
+
+.author img {
+	vertical-align: middle;
+	border: 0;
+}
+
+.activity ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.activity ul li {
+	position: relative;
+	background: rgba(0,0,0,0);
+	margin: 0 0 30px 66px;
+	padding: 10px;
+}
+
+.activity ul li .header {
+	background: #f8f9fa;
+	margin: -10px -10px -10px -10px;
+	padding: 0 10px;
+	line-height: 40px;
+}
+
+.activity ul li .author {
+	position: absolute;
+	z-index: 1;
+	width: 60px;
+	float: left;
+	top: 0px;
+	left: 0px;
+}
+
+.activity ul li .header .location, .activity ul li .header .time {
+	float: right;
+	margin-left: 20px;
+	font-size: 12px;
+	opacity: .5;
+}
+
+.activity ul li:before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	top: 9px;
+	left: -20px;
+	position: absolute;
+	border-right: 10px solid #f8f9fa;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+.activity ul li:after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	top: 9px;
+	left: -19px;
+	position: absolute;
+	border-right: 10px solid #f8f9fa;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/*/
